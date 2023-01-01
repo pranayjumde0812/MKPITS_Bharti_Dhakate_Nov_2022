@@ -1,0 +1,12 @@
+body{
+      background-image:url('Oneplus.png');
+      background-repeat:no-repeat;
+      background-size:50% 50%;background-position:center;
+      background-color:lightblue;
+    }
+
+
+h1{
+    color:White;
+    background-color:Red;
+  }
