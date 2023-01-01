@@ -1,0 +1,28 @@
+body{
+     border:solid;
+     margin:100;
+    }
+
+h1{
+   border:solid;
+   margin:10%;
+   margin-left:100;
+  }
+
+h2{
+   border:solid;
+   margin:10%;
+   margin-right:100;
+  }
+
+h3{
+   border:solid;
+   margin:20%;
+   word-spacing:300;
+  }
+ 
+h4{
+   border:solid;
+   margin:30%;
+   letter-spacing:20;
+  }
