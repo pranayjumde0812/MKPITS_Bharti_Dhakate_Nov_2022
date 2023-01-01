@@ -1,0 +1,27 @@
+h1{
+    text-transform:uppercase;
+    text-decoration:underline;
+    text-align:center;
+    text-indent:10;
+  }
+
+h2{
+    text-transform:capitalize;
+    text-decoration:line-through;
+    text-align:justify;
+    text-indent:100;
+  }
+
+p.a{
+    text-transform:lowercase;
+    text-decoration:overline;
+    text-align:right;
+    text-indent:20%;
+   }
+
+p.b{ 
+     text-transform:capitalize;
+     text-decoration:underline;
+     text-align:left;
+     text-indent:50%;
+   }
