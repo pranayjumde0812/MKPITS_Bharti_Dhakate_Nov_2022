@@ -1,0 +1,15 @@
+div {
+     background-color:red;
+     width:200px;
+     height:50px;
+     margin:20px;
+     float:left;
+    }
+
+div.one {
+         background-color:green;
+        }
+
+div#d1 {
+        background-color:orange;
+       }
