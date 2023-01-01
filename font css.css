@@ -1,0 +1,27 @@
+h1{
+    font-family:Time new roman;
+    font-style:normal;
+    font-size:x-large;
+    font-weight:800;
+  }
+
+h2{
+    font-family:Arial black;
+    font-style:bold;
+    font-size:large;
+    font-weight:bold;
+  }
+
+p.a{
+    font-family:Broadway;
+    font-style:italic;
+    font-size:x-small;
+    font-weight:normal;
+   }
+
+p.b{ 
+    font-family:Forte;
+    font-style:bold;
+    font-size:x-30;
+    font-weight:bolder; 
+   }
