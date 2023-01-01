@@ -1,0 +1,41 @@
+body{
+     border-style:Solid;
+     border-color:red;
+     border-width:Thin;
+    }
+
+h1{
+    border-style:Solid;
+    border-color:black;
+    border-width:Thick;
+  }
+
+h2{
+    border-style:Ridge;
+    border-color:black;
+    border-width:Medium;
+  }
+
+p.a{
+    border-style:Dotted;
+    border-color:blue;
+    border-width:Thin;
+   }
+
+p.b{ 
+     border-style:Groove;
+     border-color:green;
+     border-width:Thick;
+   }
+
+h3{
+    border-style:Inset;
+    border-color:Orange;
+    border-width:thick;
+  }
+
+h4{
+    border-style:Outset;
+    border-color:Pink;
+    border-width:Thick;
+  }
