@@ -1,0 +1,29 @@
+<html>
+<head><title>Score card</title>
+</head>
+<body bgcolor=powderblue>
+
+<center><table border=1 cellspacing="15" cellpadding=7 bgcolor="lightgrey" width=50% height=120px>
+<tr bgcolor="powdergreen">
+<td colspan=3 align="center"><font size="6"><b>Score Card</b></font></td>
+<tr bgcolor="orange">
+<td><font size="5">Name</font></td>
+<td><font size="5">Score</font></td>
+<td><font size="5">Time Taken</font></td>
+</tr>
+<tr bgcolor="white">
+<td><font size="5"><span id="n"></span></font></td>
+<td><font size="5"><span id="s"></span></font></td>
+<td><font size="5"><span id="t"></span> sec</font></td>
+</tr>
+</table></center>
+
+<script>
+	document.getElementById("n").innerHTML = sessionStorage.getItem("confirm");
+	document.getElementById("s").innerHTML = sessionStorage.getItem("end");
+	document.getElementById("t").innerHTML = sessionStorage.getItem("waqt");
+</script>
+
+	
+</body>
+</html>
