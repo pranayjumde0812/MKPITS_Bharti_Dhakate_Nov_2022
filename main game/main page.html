@@ -117,7 +117,13 @@ function startTimer(){
     if (counter === -1) {
         alert('sorry, out of time');
         clearInterval(counter);
-	sessionStorage.setItem("end",r);
+	if(previousSelectedNumber==undefined)
+	{
+	sessionStorage.setItem("end",0);
+	}
+	else{
+ 	sessionStorage.setItem("end",previousSelectedNumber);
+	}
 	sessionStorage.setItem("waqt",60);
         window.location.href="score page.html";
 	}
