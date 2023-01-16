@@ -1,0 +1,230 @@
+<html>
+<head>
+	<title>gaming page</title>
+	<style>
+	button
+	{
+	width:70px;
+	height:70px;
+	font-size:20px;
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+	transition:0.3s;
+	border-radius:8px;
+	}
+
+	button:hover
+	{
+	background: black;
+	color:white;
+	box-shadow:none;
+	}
+
+	button.a
+	{
+	width:120px;
+	height:50px;
+	color:white;
+	background-color:blue;
+	font-size:30px;
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+	border-radius:5px;
+	}
+
+	button.a:hover
+	{
+	background: black;
+	color:white;
+	box-shadow:none;
+	}
+
+	</style>
+</head>
+
+<body bgcolor=powderblue>
+<center><h1>Welcome <span id="i"></span></h1>
+<h1>Time Remains: <span id="count"><font color="red">00:60</font></span> seconds</h1></center>
+<br>
+
+<script>
+//to get the name from login page
+      document.getElementById("i").innerHTML = sessionStorage.getItem("confirm");
+
+//to transfer the name
+//submit function
+function f2()
+{
+ 	if(previousSelectedNumber==undefined)
+	{
+	sessionStorage.setItem("end",0);
+	}
+	else{
+ 	sessionStorage.setItem("end",previousSelectedNumber);
+	}
+ sessionStorage.setItem("waqt",60-counter);         
+ window.location.href="score page.html";
+ 
+}
+
+//reset function
+function f3()
+{
+	window.location.href="main page.html";
+	previousSelectedNumber = undefined;
+ }
+</script>
+
+<script>
+//Random array
+  const n = 25;
+  const a1 = [];
+  
+do {
+    
+    const randomNumber = Math.floor(Math.random() * 25) + 1;
+  
+	if (!a1.includes(randomNumber))
+	{
+        a1.push(randomNumber);
+        }
+  
+} while (a1.length < n);
+
+//Start Function  	 
+		  function strt()
+		  {
+		   
+			for(var i=0; i<25; i++) {
+
+				var tileId = "b" + (i+1);
+
+				var x = document.getElementById(tileId);
+		   		x.innerHTML=a1[i];
+			}
+		 
+		  }
+		    		
+	
+	//TIMER LOGIC	
+ var counter = 60;
+function startTimer(){
+
+  setInterval(function() {
+    counter--;
+    if (counter >= 0) {
+      span = document.getElementById("count");
+      span.innerHTML = "00:"+counter;
+    }
+    if (counter === -1) {
+        alert('sorry, out of time');
+        clearInterval(counter);
+	sessionStorage.setItem("end",r);
+	sessionStorage.setItem("waqt",60);
+        window.location.href="score page.html";
+	}
+  }, 1000);
+}
+
+function start()
+{
+   document.getElementById("count").style="color:blue;";
+   startTimer();
+};
+
+	
+//ONCLICK IN CONSOLE
+var arr=new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25);
+var tile;
+ var previousSelectedNumber;
+               
+
+
+
+                function validateSelection(tile){
+
+                    debugger;
+                    if(previousSelectedNumber==undefined && tile.innerHTML == '-') {
+						alert('Please Start the Game!');
+					} 
+		   else if(previousSelectedNumber==undefined)
+                     {
+                        if(tile.innerHTML==1) {
+                            tile.style.color='green';
+                            tile.style.backgroundColor='green';
+                            previousSelectedNumber=tile.innerHTML;
+
+                        }
+                        else {
+                            tile.style.color='red';
+                            tile.style.backgroundColor='red';
+
+							sessionStorage.setItem("end", 0 );
+							sessionStorage.setItem("waqt",60-counter);
+							window.setTimeout(function() { window.location.href="score page.html"; }, 2000);
+                        }
+		      }
+
+                    else {
+                        if(tile.innerHTML==(parseInt(previousSelectedNumber)+1)) {
+                            tile.style.color='green';
+                            tile.style.backgroundColor='green';
+                            previousSelectedNumber=tile.innerHTML;
+                        }
+                        else {
+                            tile.style.color='red';
+                            tile.style.backgroundColor='red';
+
+							sessionStorage.setItem("end", previousSelectedNumber );
+							sessionStorage.setItem("waqt",60-counter);
+							window.setTimeout(function() { window.location.href="score page.html"; }, 2000);
+                         }
+                       } 
+		     
+
+                    console.log(tile.innerHTML)
+	}		
+
+  </script>
+   
+  <table align=center>
+     <tr>
+      <td><button type="button" onclick="validateSelection(this)" id="b1" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b2" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b3" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b4" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b5" >-</button></td>
+	 </tr>
+	 <tr>
+      <td><button type="button" onclick="validateSelection(this)" id="b6" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b7" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b8" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b9" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b10">-</button></td>
+	 </tr>
+	 <tr>
+      <td><button type="button" onclick="validateSelection(this)" id="b11" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b12" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b13" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b14" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b15" >-</button></td>
+	 </tr>
+	 <tr>
+      <td><button type="button" onclick="validateSelection(this)" id="b16" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b17" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b18" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b19" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b20" >-</button></td>
+	 </tr>
+	 <tr>
+      <td><button type="button" onclick="validateSelection(this)" id="b21" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b22" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b23" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b24" >-</button></td>
+	  <td><button type="button" onclick="validateSelection(this)" id="b25" >-</button></td>
+	 </tr>
+		 
+   </table><br>
+    <center> <button type="button" class="a" onclick="strt(); start()">Start</button>
+     <button type="button" class="a" onclick="f3()" >Reset</button>
+     <button type="button" class="a" onclick="f2()" >Submit</button></center>
+</body>
+</html>
