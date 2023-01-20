@@ -1,0 +1,27 @@
+<html>
+<head><title>1st version reduce in JS Array Methods</title>
+</head>
+
+<body>
+<h1>Reduce using Function Declaration</h1>
+
+<pre>
+<script>
+var arr=new Array(5),sum=0;
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+function fun1(sum,x)
+{
+return(sum+x);
+}
+
+var res=arr.reduce(fun1);
+document.write(res);
+
+</script>
+</pre>
+</body>
+</html>
