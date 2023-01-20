@@ -1,0 +1,26 @@
+<html>
+<head><title>1st varsion map in JS Array Methods</title>
+</head>
+
+<body>
+<h1>Map using Function Declaration</h1>
+
+<pre>
+<script>
+var arr=new Array(5);
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+function fun1(x)
+{
+document.write(" " +(x*x));
+}
+
+arr.map(fun1);
+
+</script>
+</pre>
+</body>
+</html>
