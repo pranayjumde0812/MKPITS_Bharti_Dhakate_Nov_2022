@@ -1,0 +1,47 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1>Grade of student</h1>
+<pre>
+<script>
+var a,s1,s2,s3,s4,s5;
+s1=prompt("Enter the Subject Mark 1");
+i1=parseInt(s1);
+s2=prompt("Enter the Subject Mark 2");
+i2=parseInt(s2);
+s3=prompt("Enter the Subject Mark 3");
+i3=parseInt(s3);
+s4=prompt("Enter the Subject Mark 4");
+i4=parseInt(s4);
+s5=prompt("Enter the Subject Mark 5");
+i5=parseInt(s5);
+document.writeln("sub 1 mark " +s1);
+document.writeln("sub 2 mark " +s2);
+document.writeln("sub 3 mark " +s3);
+document.writeln("sub 4 mark " +s4);
+document.writeln("sub 5 mark " +s5);
+a=(i1+i2+i3+i4+i5)/5;
+document.writeln("average mark" +a);
+if(a>80)
+{
+alert("YOU HAVE A GRADE");
+}
+else if(81>a && a>60)
+{
+alert("you have B grade");
+}
+else if(61>a && a>40)
+{
+alert("you have C grade");
+}
+else
+{
+alert("you have failed in exam");
+}
+
+</script>
+</pre>
+</body>
+</html>
