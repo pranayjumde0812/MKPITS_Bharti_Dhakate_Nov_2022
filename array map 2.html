@@ -1,0 +1,26 @@
+<html>
+<head><title>2nd varsion map in JS Array Methods</title>
+</head>
+
+<body>
+<h1>Map using Arrow Function</h1>
+
+<pre>
+<script>
+var arr=new Array(5);
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+var a=(x)=>
+{
+document.write(" " +(x*x));
+}
+
+arr.map(a);
+
+</script>
+</pre>
+</body>
+</html>
