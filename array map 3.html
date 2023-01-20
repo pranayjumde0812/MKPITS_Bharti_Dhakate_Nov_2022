@@ -1,0 +1,24 @@
+<html>
+<head><title>3rd version map in JS Array Methods</title>
+</head>
+
+<body>
+<h1>Map using Arrow Function (shortcut)</h1>
+
+<pre>
+<script>
+var arr=new Array(5);
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+arr.map(x =>
+{
+document.write(" " +(x*x));
+}); 
+
+</script>
+</pre>
+</body>
+</html>
