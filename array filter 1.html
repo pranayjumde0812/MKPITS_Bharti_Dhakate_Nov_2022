@@ -1,0 +1,27 @@
+<html>
+<head><title>1st version filter in JS Array Methods</title>
+</head>
+
+<body>
+<h1>Filter using Function Declaration</h1>
+
+<pre>
+<script>
+var arr=new Array(5);
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+function fun1(x)
+{
+return(x%2==0);
+}
+
+var res=arr.filter(fun1);
+document.write(res);
+
+</script>
+</pre>
+</body>
+</html>
