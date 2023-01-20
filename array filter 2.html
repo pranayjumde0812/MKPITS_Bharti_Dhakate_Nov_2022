@@ -1,0 +1,27 @@
+<html>
+<head><title>2nd varsion filter in JS Array Methods</title>
+</head>
+
+<body>
+<h1>FIlter using Arrow Function</h1>
+
+<pre>
+<script>
+var arr=new Array(5);
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+var a=(x)=>
+{
+return(x%2==0);
+}
+
+ var res=arr.filter(a);
+document.write(res);
+
+</script>
+</pre>
+</body>
+</html>
