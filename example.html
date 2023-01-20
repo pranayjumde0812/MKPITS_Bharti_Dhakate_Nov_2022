@@ -1,0 +1,126 @@
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+
+body {background-color: #eee;}
+
+.container {
+  padding: 1rem 1rem;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+li {
+  padding: 1rem; 
+  background: #fff;
+  color: #202020;
+ 
+}
+
+li:hover{
+box-shadow: 1px 2px 3px 0px rgba(25,25,25,0.6);
+opacity: 1;
+transition:all 0.5s ease;  
+}
+
+
+h1 {
+  background-color: darken(steelblue, 10%);
+  color: #fff;
+  padding: 1.25rem;
+}
+h2 {margin: 0;
+}
+p {
+  color: #555; line-height: 1.5;
+}
+img {
+ width: 100%; margin-bottom:1.5rem; border-radius: 5px;
+}
+
+
+
+/* Flexbox Styling */
+
+/* Inspired by https://www.aaron-gustafson.com/notebook/playing-with-flexbox-and-quantity-queries/ */
+
+.item-list {
+  display: flex; 
+  flex-wrap: wrap;
+  }
+.item {
+  flex: 100%;
+  margin: 0 0 1.25rem;
+}
+
+@media (min-width: 36em) {
+
+.item { 
+  flex: 0 0 calc( 50% - 1.25rem / 2 );
+  margin-left: 1.25rem;
+}
+ 
+ .item:nth-child(odd){ 
+   margin-left: 0;
+ }  
+  
+}
+
+@media (min-width: 60em) {
+.item {flex: 0 0 calc(100% / 3 - 0.875rem);
+}
+  
+.item:nth-child(odd), item:nth-child(even) { 
+    margin-left: 1.25rem;
+}
+  
+ .item:nth-child(3n+1) { 
+  margin-left: 0;} 
+}
+
+</style>
+</head>
+<body>
+<header>
+    <h1>Flexbox Cards Layout</h1>
+  </header>
+<div class="container">
+  
+  <ul class="item-list">
+
+    <li class="item item1">
+      <img src="http://source.unsplash.com/B1amIgaNkwA/480x320/">
+      <div class="item-text">
+        <h2>Item 1</h2>
+        <p>Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Integer posuere
+          erat a ante venenatis dapibus posuere velit aliquet.</p>
+      </div>
+    </li>
+
+    <li class="item item2">
+      <img src="http://source.unsplash.com/xcC5ozHk_N8/480x320/">
+      <div class="item-text">
+        <h2>Item 2</h2>
+        <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </div>
+    </li>
+    <li class="item item3">
+      <img src="http://source.unsplash.com/mWRR1xj95hg/480x320/">
+      <div class="item-text">
+        <h2>Item 3</h2>
+        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id
+          nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+    </li>
+ </ul>
+</div>
+</body>
+</html>
