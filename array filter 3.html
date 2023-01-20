@@ -1,0 +1,26 @@
+<html>
+<head><title>3rd version filter in JS Array Methods</title>
+</head>
+
+<body>
+<h1>Filter using Arrow Function (shortcut)</h1>
+
+<pre>
+<script>
+var arr=new Array(5);
+for(i=0;i<5;i++)
+{
+arr[i]=parseInt(prompt("Enter " +i+ " number"));
+}
+
+var a=arr.filter(x =>
+{
+return(x%2==0);
+}); 
+
+document.write(a);
+
+</script>
+</pre>
+</body>
+</html>
