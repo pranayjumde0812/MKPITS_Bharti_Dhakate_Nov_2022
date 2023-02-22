@@ -1,10 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class login_info {
     private JPanel jpanal2;
@@ -43,20 +40,36 @@ public class login_info {
         public void actionPerformed(ActionEvent e) {
             String ename=textField1.getText();
             String epass=textField2.getText();
+//            try {
+//                Statement st = con.createStatement();
+//                ResultSet rs=st.executeQuery("select * from login_info");
+//                while (rs.next()) {
+//                    if ((ename.equals(rs.getString("Uname"))) && (epass.equals(rs.getString("Upass")))) {
+//                        flag = 1;
+//                    }
+//                }
+//                if(flag==1) {
+//                    JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Login Successful");
+//                }
+//                else {
+//                    JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Login  Un-Successful");
+//                }
+//            } catch (Exception ex) {
+//                System.out.println(ex);
+//            }
             try {
-                Statement st = con.createStatement();
-                ResultSet rs=st.executeQuery("select * from login_info");
-                while (rs.next()) {
-                    if ((ename.equals(rs.getString("Uname"))) && (epass.equals(rs.getString("Upass")))) {
-                        flag = 1;
-                    }
-                }
-                if(flag==1) {
+               PreparedStatement ps=con.prepareStatement("select Uname, Upass from login_info where Uname=? and Upass=?");
+               ps.setString(1,ename);
+               ps.setString(2,epass);
+
+               ResultSet r= ps.executeQuery();
+
+                if (r.next()) {
                     JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Login Successful");
-                }
-                else {
+                } else {
                     JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Login  Un-Successful");
                 }
+
             } catch (Exception ex) {
                 System.out.println(ex);
             }
