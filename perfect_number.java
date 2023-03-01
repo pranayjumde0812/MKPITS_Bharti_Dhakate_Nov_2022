@@ -1,4 +1,4 @@
-/*Check whether the number is perfect number or not */
+/* WAP java Program to Check whether the number is perfect number or not */
 import java.util.Scanner;
 class perfect_number
 {
